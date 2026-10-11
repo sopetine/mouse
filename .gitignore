@@ -1,11 +1,14 @@
-# Build artifacts
-*.dmg
+# Build artifacts — ignore locally-built .app bundles, but keep the DMG that's shipped
+MouseJiggler.app/
 *.app
-.DS_Store
 build/
 dist/
 
+# But always ship the latest DMG in the landing page
+!landing/downloads/*.dmg
+
 # macOS
+.DS_Store
 ._*
 .Spotlight-V100
 .Trashes
