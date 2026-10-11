@@ -57,6 +57,13 @@
     padding: 22px 0;
   }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; }
+  .brand .by {
+    margin-left: 6px; padding-left: 10px;
+    border-left: 2px solid var(--ink);
+    font-weight: 500; font-size: 13px; color: var(--ink-2);
+  }
+  .brand .by a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  .brand .by a:hover { color: var(--yellow-2); }
   .brand .mark {
     width: 32px; height: 32px; display: grid; place-items: center;
     background: var(--yellow); border: 2.5px solid var(--ink);
@@ -175,7 +182,8 @@
   .tip:nth-child(3) { transform: rotate(1deg); }
   .tip:nth-child(1) { transform: rotate(-0.5deg); }
   .tip:hover { transform: rotate(0) translateY(-2px); }
-  .tip .em { font-size: 30px; line-height: 1; margin-bottom: 8px; }
+  .tip .em { width: 44px; height: 44px; margin: 0 auto 10px; line-height: 0; }
+  .tip .em svg { width: 100%; height: 100%; display: block; }
   .tip h3 { margin: 0 0 4px; font-size: 16px; font-weight: 800; }
   .tip p { margin: 0; font-size: 13px; color: var(--ink-2); line-height: 1.45; }
 
@@ -227,6 +235,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3 L19 12 L12 13 L13 19 L11 20 L9 14 L4 17 Z"/></svg>
       </span>
       Mouse
+      <span class="by">by <a href="https://github.com/sopetine" target="_blank" rel="noopener">sopetine</a></span>
     </div>
     <div class="top-right">
       <a class="pill" href="https://github.com/sopetine/mouse" aria-label="Star on GitHub">
@@ -284,7 +293,7 @@
     </p>
 
     <div class="cta pop pop-5">
-      <a class="btn" href="downloads/Mouse-1.0.dmg" id="dl">
+      <a class="btn" href="https://github.com/sopetine/mouse/raw/main/landing/downloads/Mouse-1.0.dmg" id="dl">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
         Download for Mac
       </a>
@@ -305,17 +314,36 @@
     <!-- Three quick tips -->
     <div class="trio pop pop-6">
       <div class="tip">
-        <div class="em">🌙</div>
+        <div class="em">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="25" r="16" fill="#FFD60A"/>
+            <path d="M24 17v8l5 3"/>
+          </svg>
+        </div>
         <h3>30s idle, then nudge</h3>
         <p>only kicks in when you've actually stopped typing or moving.</p>
       </div>
       <div class="tip">
-        <div class="em">🪶</div>
+        <div class="em">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="12" width="36" height="26" rx="3" fill="#fff"/>
+            <path d="M6 19h36"/>
+            <circle cx="12" cy="15.5" r="0.8" fill="#1a1a1a"/>
+            <circle cx="16" cy="15.5" r="0.8" fill="#1a1a1a"/>
+            <path d="M20 28l3 3 6-6"/>
+            <path d="M14 30h6"/>
+          </svg>
+        </div>
         <h3>1.4 MB</h3>
         <p>smaller than a single emoji you sent yesterday.</p>
       </div>
       <div class="tip">
-        <div class="em">🫣</div>
+        <div class="em">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 6 L40 14 V26 c0 9-7 14-16 16 -9-2-16-7-16-16 V14 Z" fill="#7ee787"/>
+            <path d="M17 24l5 5 10-10"/>
+          </svg>
+        </div>
         <h3>Zero permissions</h3>
         <p>no accessibility, no screen recording, no analytics. just a nudge.</p>
       </div>
